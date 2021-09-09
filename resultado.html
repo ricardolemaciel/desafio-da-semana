@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Desafio da Semana</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <h2>Simulador de Investimento</h2>
+    <p>*A taxa de juros aplicada é de 1,5% ao mês.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-75">
+              <p class="text">Olá <span class="text_input" id="nome"></span>, com o seu invetimento inicial de <span class="text_input" id="valorInicial"></span>
+                mais o seu investimento mensal de <span class="text_input" id="valorMensal"></span>,
+                no prazo de <span class="text_input" id="periodo"></span> meses, você terá <span class="text_input" id="resultado"></span>
+            </div>
+    </div>
+    <a href="index.html">
+        <input type="button" value="VOLTAR">
+    </a>
+
+    <script>
+    
+    function queryString(parameter) {  
+              var loc = location.search.substring(1, location.search.length);   
+              var param_value = false;   
+              var params = loc.split("&");   
+              for (i=0; i<params.length;i++) {   
+                  param_name = params[i].substring(0,params[i].indexOf('='));   
+                  if (param_name == parameter) {                                          
+                      param_value = params[i].substring(params[i].indexOf('=')+1)   
+                  }   
+              }   
+              if (param_value) {   
+                  return param_value;   
+              }   
+              else {   
+                  return undefined;   
+              }   
+        }
+
+    var variavel = queryString("minhaVariavel");
+
+    var array = variavel.split(',')
+    
+
+    document.getElementById("nome").innerHTML = array[0];
+    document.getElementById("valorInicial").innerHTML = parseFloat(array[1]).toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+    document.getElementById("valorMensal").innerHTML = parseFloat(array[2]).toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });    
+    document.getElementById("periodo").innerHTML = array[3];
+    document.getElementById("resultado").innerHTML = parseFloat(array[4]).toLocaleString("pt-BR", { minimumFractionDigits: 2 , style: 'currency', currency: 'BRL' });
+
+    </script> 
+
+</body>
+
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Desafio da Semana</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <h2>Simulador de Investimento</h2>
+    <p>*A taxa de juros aplicada é de 1,5% ao mês.</p>
+    
+    <div class="container">
+      <form action="">
+        <div class="row">
+          <div class="col-25">
+            <label for="fnome">SEU NOME</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="fnome" id="fnome" placeholder="Digite seu nome aqui!" autocomplete="off">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="fValorInicial">VALOR INICIAL</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="fValorInicial" id="fValorInicial" placeholder="Por exemplo: 20000" autocomplete="off">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="fValorMensal">VALOR MENSAL</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="fValorMensal" id="fValorMensal" placeholder="Por exemplo: 150" autocomplete="off">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="fPeriodo">PERIODO</label>
+          </div>
+          <div class="col-75">
+            <select id="fPeriodo">
+              <option value="6">6 meses</option>
+              <option value="12">1 ano</option>
+              <option value="18">1 ano e meio</option>
+              <option value="24">2 anos</option>
+              <option value="30">2 anos e meio</option>
+              <option value="36">3 anos</option>
+              <option value="42">3 anos e meio</option>
+              <option value="48">4 anos</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <input type="button" onclick="calculadora()" value="SIMULAR">
+        </div>
+      </form>
+    </div> 
+    
+<script src="assets/js/calculadora.js"></script> 
+
+</body>
+
+
+</html>
